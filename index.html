@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tek Celulares</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial;
+background:#020617;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#020617;
+border-bottom:1px solid #1e293b;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+height:55px;
+transition:0.3s;
+}
+
+.logo:hover{
+transform:scale(1.05);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#020617,#0f172a);
+animation:fadeIn 1.2s ease;
+}
+
+.hero h1{
+font-size:44px;
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:15px;
+color:#94a3b8;
+font-size:18px;
+}
+
+/* BOTÃO */
+
+.btn{
+display:inline-block;
+margin-top:25px;
+background:#f97316;
+padding:15px 30px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* SEÇÕES */
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.sobre{
+max-width:700px;
+margin:auto;
+color:#cbd5f5;
+line-height:1.6;
+}
+
+/* PRODUTOS */
+
+.produtos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#0f172a;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+animation:fadeUp 1s ease;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 25px rgba(0,0,0,0.5);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.preco{
+color:#22c55e;
+font-size:20px;
+margin:10px;
+}
+
+/* SIMULADOR */
+
+.simulador{
+max-width:400px;
+margin:auto;
+background:#0f172a;
+padding:30px;
+border-radius:15px;
+animation:fadeUp 1s ease;
+}
+
+.simulador input,
+.simulador select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+}
+
+#resultado{
+margin-top:20px;
+font-size:18px;
+color:#22c55e;
+}
+
+/* IDENTIDADE */
+
+.identidade img{
+width:260px;
+margin:10px;
+transition:0.4s;
+}
+
+.identidade img:hover{
+transform:scale(1.05);
+}
+
+/* AVALIAÇÕES */
+
+.avaliacoes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.review{
+background:#0f172a;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.review:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+
+footer{
+background:#020617;
+padding:40px;
+text-align:center;
+color:#94a3b8;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+padding:16px 20px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo-tek-celulares.png" class="logo">
+
+<nav>
+
+<a href="#sobre">Quem Somos</a> <a href="#catalogo">iPhones</a> <a href="#simular">Simulação</a> <a href="#contato">Contato</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Tek Celulares</h1>
+
+<p>Conquiste seu iPhone com entrada pequena e parcelas direto com a loja.</p>
+
+<a class="btn" href="https://wa.me/5551981361159">Falar no WhatsApp</a>
+
+</section>
+
+<section id="sobre">
+
+<h2>Quem Somos</h2>
+
+<p class="sobre">
+
+A Tek Celulares nasceu com o objetivo de ajudar pessoas a conquistarem seu celular novo.
+Somos especialistas em iPhones, acessórios e assistência técnica.
+
+Também oferecemos parcelamento direto com a loja para facilitar sua compra.
+
+</p>
+
+</section>
+
+<section id="catalogo">
+
+<h2>iPhones disponíveis</h2>
+
+<div class="produtos">
+
+<div class="card">
+
+<img src="iphone11.png">
+
+<h3>iPhone 11</h3>
+
+<div class="preco">A partir de R$1.750</div>
+
+<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+
+</div>
+
+<div class="card">
+
+<img src="iphone12.png">
+
+<h3>iPhone 12</h3>
+
+<div class="preco">A partir de R$1.900</div>
+
+<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+
+</div>
+
+<div class="card">
+
+<img src="iphone13.png">
+
+<h3>iPhone 13</h3>
+
+<div class="preco">A partir de R$2.150</div>
+
+<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+
+</div>
+
+<div class="card">
+
+<img src="iphone14.png">
+
+<h3>iPhone 14</h3>
+
+<div class="preco">A partir de R$2.500</div>
+
+<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="identidade">
+
+<h2>Identidade Tek</h2>
+
+<img src="personagem1.png">
+<img src="iphone17promax.png">
+<img src="personagem2.png">
+
+</section>
+
+<section id="simular">
+
+<h2>Simular Parcelamento</h2>
+
+<div class="simulador">
+
+<input id="valor" type="number" placeholder="Valor do aparelho">
+
+<input id="entrada" type="number" placeholder="Entrada">
+
+<select id="parcelas">
+
+<option value="">Parcelas</option>
+<option value="1">1x</option>
+<option value="2">2x</option>
+<option value="3">3x</option>
+<option value="4">4x</option>
+<option value="5">5x</option>
+
+</select>
+
+<button class="btn" onclick="simular()">Calcular</button>
+
+<div id="resultado"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Clientes da Tek</h2>
+
+<div class="avaliacoes">
+
+<div class="review">
+
+⭐️⭐️⭐️⭐️⭐️
+Consegui comprar meu primeiro iPhone com entrada pequena.
+
+</div>
+
+<div class="review">
+
+⭐️⭐️⭐️⭐️⭐️
+Entrega rápida e atendimento top.
+
+</div>
+
+<div class="review">
+
+⭐️⭐️⭐️⭐️⭐️
+Loja confiável, recomendo.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contato">
+
+<h2>Contato</h2>
+
+<p>Instagram: @tekcelularess</p>
+
+<p>WhatsApp: (51) 98136-1159</p>
+
+<p>Envio de acessórios 24h via motoboy</p>
+
+</section>
+
+<footer>
+
+Tek Celulares © 2026
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5551981361159">
+
+WhatsApp
+
+</a>
+
+<script>
+
+function simular(){
+
+let valor = Number(document.getElementById("valor").value)
+let entrada = Number(document.getElementById("entrada").value)
+let parcelas = Number(document.getElementById("parcelas").value)
+
+if(!valor || parcelas == ""){
+document.getElementById("resultado").innerHTML="Digite o valor e escolha parcelas"
+return
+}
+
+let restante = valor - entrada
+
+if(restante < 0){
+document.getElementById("resultado").innerHTML="Entrada maior que valor"
+return
+}
+
+let parcela = restante / parcelas
+
+document.getElementById("resultado").innerHTML =
+"Entrada: R$ "+entrada.toFixed(2)+"<br>"+
+parcelas+"x de R$ "+parcela.toFixed(2)
+
+}
+
+</script>
+
+</body>
+</html>
+
