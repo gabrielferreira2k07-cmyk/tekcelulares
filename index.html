@@ -18,8 +18,8 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial;
-background:#020617;
+font-family:Arial, sans-serif;
+background:linear-gradient(180deg,#020617,#020617,#020617,#0f172a);
 color:white;
 scroll-behavior:smooth;
 }
@@ -69,8 +69,9 @@ animation:fadeIn 1.2s ease;
 }
 
 .hero h1{
-font-size:44px;
+font-size:48px;
 color:#38bdf8;
+text-shadow:0 0 15px rgba(56,189,248,0.5);
 }
 
 .hero p{
@@ -84,18 +85,19 @@ font-size:18px;
 .btn{
 display:inline-block;
 margin-top:25px;
-background:#f97316;
+background:linear-gradient(45deg,#f97316,#fb923c);
 padding:15px 30px;
 border-radius:10px;
 color:white;
 text-decoration:none;
 font-weight:bold;
 transition:0.3s;
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.5);
 }
 
 /* SEÇÕES */
@@ -131,13 +133,16 @@ margin:auto;
 background:#0f172a;
 padding:20px;
 border-radius:15px;
-transition:0.3s;
-animation:fadeUp 1s ease;
+transition:0.5s ease;
+border:1px solid transparent;
+opacity:0;
+transform:translateY(40px);
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 25px rgba(0,0,0,0.5);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+border:1px solid #38bdf8;
 }
 
 .card img{
@@ -227,17 +232,18 @@ color:#94a3b8;
 position:fixed;
 bottom:20px;
 right:20px;
-background:#22c55e;
-padding:16px 20px;
+background:linear-gradient(45deg,#22c55e,#16a34a);
+padding:16px 22px;
 border-radius:50px;
 color:white;
 text-decoration:none;
 font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
 transition:0.3s;
 }
 
 .whatsapp:hover{
-transform:scale(1.1);
+transform:scale(1.1) rotate(-3deg);
 }
 
 /* ANIMAÇÕES */
@@ -483,6 +489,27 @@ parcelas+"x de R$ "+parcela.toFixed(2)
 
 </script>
 
+<script>
+
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () =>{
+
+cards.forEach(card =>{
+
+let top = card.getBoundingClientRect().top;
+let tela = window.innerHeight;
+
+if(top < tela - 100){
+card.style.opacity = "1";
+card.style.transform = "translateY(0)";
+}
+
+})
+
+})
+
+</script>
+
 </body>
 </html>
-
