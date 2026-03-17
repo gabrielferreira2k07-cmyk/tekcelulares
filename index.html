@@ -189,6 +189,8 @@ border:1px solid #38bdf8;
 
 .card img{
 width:100%;
+height:180px;
+object-fit:contain;
 border-radius:10px;
 }
 
@@ -198,6 +200,28 @@ font-size:22px;
 margin:10px;
 font-weight:bold;
 text-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+
+/* PROMO */
+.banner-promo{
+max-width:900px;
+margin:auto;
+padding:40px;
+border-radius:20px;
+background:linear-gradient(45deg,#f59e0b,#ea580c);
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+}
+
+.preco-promo{
+font-size:40px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.contador{
+margin:15px 0;
+font-size:22px;
+color:white;
 }
 
 /* SIMULADOR */
@@ -413,6 +437,34 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 </section>
 
+<section id="promo">
+
+<h2>🔥 PROMOÇÃO DO MÊS</h2>
+
+<div class="banner-promo">
+
+<h2>QUEIMA DE ESTOQUE</h2>
+
+<h3>iPhone XR / XS</h3>
+
+<div class="preco-promo">R$699,99</div>
+
+<p>
+⚡ Desempenho Apple<br>
+📸 Câmera top<br>
+🔋 Bateria duradoura
+</p>
+
+<div class="contador" id="contadorPromo"></div>
+
+<a class="btn" href="https://wa.me/5551981361159">
+Comprar agora
+</a>
+
+</div>
+
+</section>
+
 <section id="acessorios">
 
 <h2>Acessórios</h2>
@@ -427,7 +479,7 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 <div class="preco">R$19,90</div>
 
-<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+<a class="btn" href="https://wa.me/5551981361159">Reservar agora</a>
 
 </div>
 
@@ -439,7 +491,7 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 <div class="preco">R$19,90</div>
 
-<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+<a class="btn" href="https://wa.me/5551981361159">Reservar agora</a>
 
 </div>
 
@@ -451,7 +503,7 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 <div class="preco">R$19,90</div>
 
-<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+<a class="btn" href="https://wa.me/5551981361159">Reservar agora</a>
 
 </div>
 
@@ -463,7 +515,7 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 <div class="preco">R$34,99</div>
 
-<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+<a class="btn" href="https://wa.me/5551981361159">Reservar agora</a>
 
 </div>
 
@@ -475,7 +527,7 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 <div class="preco">R$34,99</div>
 
-<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+<a class="btn" href="https://wa.me/5551981361159">Reservar agora</a>
 
 </div>
 
@@ -487,7 +539,7 @@ Também oferecemos parcelamento direto com a loja para facilitar sua compra.
 
 <div class="preco">R$34,99</div>
 
-<a class="btn" href="https://wa.me/5551981361159">Comprar</a>
+<a class="btn" href="https://wa.me/5551981361159">Reservar agora</a>
 
 </div>
 
@@ -636,6 +688,31 @@ card.style.transform = "translateY(0)";
 })
 
 })
+
+</script>
+
+<script>
+
+let dataFinal = new Date("March 30, 2026 23:59:59").getTime();
+
+setInterval(function(){
+
+let contador = document.getElementById("contadorPromo");
+if(!contador) return;
+
+let agora = new Date().getTime();
+let distancia = dataFinal - agora;
+
+let dias = Math.floor(distancia/(1000*60*60*24));
+let horas = Math.floor((distancia%(1000*60*60*24))/(1000*60*60));
+let minutos = Math.floor((distancia%(1000*60*60))/(1000*60));
+
+contador.innerHTML =
+"⏰ ACABA HOJE: "+dias+"d "+horas+"h "+min+"m";
+
+},1000);
+
+</script>
 
 </script>
 
